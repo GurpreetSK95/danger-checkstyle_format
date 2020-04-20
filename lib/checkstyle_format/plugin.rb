@@ -73,7 +73,7 @@ module Danger
 
     def send_inline_comment(errors)
       errors.each do |error|
-        warn(error.message, file: error.file_name, line: error.line)
+        failure(error.message, file: error.file_name, line: error.line)
       end
     end
   end

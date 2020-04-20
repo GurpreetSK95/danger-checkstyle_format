@@ -5,7 +5,7 @@ CheckstyleError = Struct.new(:file_name, :line, :column, :severity, :message, :s
       node[:line].to_i,
       node[:column].nil? ? nil : node[:column].to_i,
       node[:severity],
-      node[:message],
+      " #{node[:message]}", # Added padding for readability.
       node[:source]
     )
   end
